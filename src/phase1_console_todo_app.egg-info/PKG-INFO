@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: phase1-console-todo-app
+Version: 0.1.0
+Summary: Phase I - In-Memory Python Console App for managing tasks
+Author-email: Developer <developer@example.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pytest>=7.0.0
+Provides-Extra: dev
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+
+# Phase I - In-Memory Python Console App
+
+A CLI-based Todo Application that manages tasks in memory. This is the foundational phase focusing on architectural purity, clean code, and separation of concerns before introducing persistence or AI.
+
+## Features
+
+- Add tasks with title and description
+- View all tasks in a table format
+- Update existing tasks
+- Mark tasks as complete
+- Delete tasks
+- In-memory storage (data lost on exit)
+
+## Requirements
+
+- Python 3.13+
+- `rich` library for console output
+
+## Installation
+
+1. Clone the repository
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -e .
+   # or
+   pip install rich
+   ```
+
+## Usage
+
+Run the application:
+```bash
+python -m src.main
+```
+
+Or install and run:
+```bash
+pip install -e .
+todo-app
+```
+
+## Project Structure
+
+```
+src/
+├── models/
+│   └── task.py          # Task data model
+├── services/
+│   └── todo_service.py  # Business logic for task management
+├── ui/
+│   └── console_ui.py    # Rich-based console user interface
+└── main.py              # Application entry point
+```
+
+## Architecture
+
+The application follows a modular architecture with separate concerns:
+- **Models**: Data structures and validation
+- **Services**: Business logic and data operations
+- **UI**: User interface and interaction
+- **Main**: Application flow and orchestration

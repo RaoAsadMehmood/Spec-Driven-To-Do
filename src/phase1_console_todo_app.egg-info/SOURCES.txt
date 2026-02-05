@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/main.py
+src/models/task.py
+src/models/task_enum.py
+src/phase1_console_todo_app.egg-info/PKG-INFO
+src/phase1_console_todo_app.egg-info/SOURCES.txt
+src/phase1_console_todo_app.egg-info/dependency_links.txt
+src/phase1_console_todo_app.egg-info/entry_points.txt
+src/phase1_console_todo_app.egg-info/requires.txt
+src/phase1_console_todo_app.egg-info/top_level.txt
+src/services/todo_service.py
+src/ui/console_ui.py
