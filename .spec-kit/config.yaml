@@ -1,0 +1,54 @@
+# Spec-Kit Configuration for Monorepo
+
+version: 1.0
+project_type: monorepo
+name: Phase II Monorepo Migration
+
+directories:
+  frontend:
+    path: ./frontend
+    type: nextjs
+    claudemd: ./frontend/CLAUDE.md
+  backend:
+    path: ./backend
+    type: fastapi
+    claudemd: ./backend/CLAUDE.md
+
+specs:
+  features: ./specs/features
+  api: ./specs/api
+  database: ./specs/database
+  ui: ./specs/ui
+  overview: ./specs/overview.md
+
+tools:
+  frontend:
+    - nextjs
+    - typescript
+    - jest
+  backend:
+    - fastapi
+    - python313
+    - pytest
+
+conventions:
+  naming:
+    kebab-case: ["directories", "files"]
+    PascalCase: ["components", "classes"]
+    camelCase: ["functions", "variables"]
+  file_organization:
+    backend:
+      models: ./backend/models
+      services: ./backend/services
+      api: ./backend/api
+      tests: ./backend/tests
+    frontend:
+      components: ./frontend/components
+      pages: ./frontend/pages
+      utils: ./frontend/utils
+      tests: ./frontend/tests
+
+validation:
+  enabled: true
+  specs_required: true
+  claudemd_required: true

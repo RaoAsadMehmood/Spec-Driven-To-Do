@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: phase1-console-todo-app
+Version: 0.1.0
+Summary: Phase I - In-Memory Python Console App for managing tasks
+Author-email: Developer <developer@example.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: rich>=13.0.0
+Requires-Dist: pytest>=7.0.0
+Provides-Extra: dev
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"

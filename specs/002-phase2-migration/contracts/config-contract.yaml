@@ -1,0 +1,47 @@
+# Spec-Kit Configuration Contract: Phase II - Monorepo Migration
+
+feature: phase2-migration
+date: 2026-02-05
+
+# Directory Structure Contract
+directories:
+  required:
+    - frontend/
+    - backend/
+    - .spec-kit/
+    - specs/features/
+    - specs/api/
+    - specs/database/
+    - specs/ui/
+
+# File Migration Contract
+migrations:
+  backend:
+    - src/ -> backend/src/
+    - tests/ -> backend/tests/
+    - pyproject.toml -> backend/pyproject.toml
+
+# Configuration Files Contract
+config_files:
+  root:
+    - CLAUDE.md: monorepo_root_guidelines
+  subdirs:
+    frontend:
+      - CLAUDE.md: frontend_guidelines
+    backend:
+      - CLAUDE.md: backend_guidelines
+
+# Specification Reorganization Contract
+spec_org:
+  features: specs/features/
+  api: specs/api/
+  database: specs/database/
+  ui: specs/ui/
+  overview: specs/overview.md
+
+# Validation Requirements
+validation:
+  - backend_functionality_preserved: true
+  - frontend_structure_created: true
+  - specs_properly_organized: true
+  - governance_files_exist: true
